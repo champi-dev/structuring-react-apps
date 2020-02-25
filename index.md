@@ -14,5 +14,23 @@ A complex React Project is one that:
 * Has container screens that need to share data with many children components.
 * Manages and parses data coming from a web server.
 * Handles different permissions in the app based on user role (e.g. private routes).
+* Has support for different languages.
 * Has unit tests to verify correctness of both UI logic (i.e. containers/components) and Business Data logic (i.e. redux).
 
+## Business problem definition
+We want to create a music streaming platform where:
+
+### Listeners can:
+* Find independent artists
+* Save artists as favorites
+* Listen to their music
+* Leave comments on tracks
+
+### Artists can:
+* Submit their music/art
+* Reply to users comments
+* See stats related to streams
+
+### An admin can:
+* Enable artists into the platform
+* See stats related to streams
