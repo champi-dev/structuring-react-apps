@@ -51,4 +51,4 @@ We want to create a music streaming platform where:
 
 ## Table of Contents
 
-- [Get started](./1.get_started/README.md)
+- [Get started](./1.get-started/README.md)
