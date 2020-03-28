@@ -4,8 +4,7 @@
 
 The're only two sides of this coin, you either:
 
-* Don't care at all mixing single quotes with duoble ones, 
-
+* Don't care at all mixing single quotes with duoble ones,
   adding semicolons whenever you feel like it, adding spaces in a completely random manner, 
   declaring variables that will never be used and
   can't stand the editor highliting in red tiny errors.
@@ -13,7 +12,6 @@ The're only two sides of this coin, you either:
 **OR**
 
 * Think that code is meant to be read by people and therefore anything that can be
-
   added to improve its readability is 100% worth it. You also think that having consistency
   in how the code is presented adds in quality.
 
@@ -78,14 +76,14 @@ Let's test that our config is working as intended:
 Go to `src/index.js` and hit `CTRL + S` . You should see how your semicolons `;` go away
 automatically.
 
-This happens because one of our formatting rules don't allow semicolons in our code and by saving the file an "action" is executed in vscode formatting the file automatically.
+This happens because one of our formatting rules doesn't allow semicolons in our code and by saving the file an "action" is executed in vscode formatting the file automatically.
 
 ## Configure Husky
 
-[Husky](https://github.com/typicode/husky) is a tool that lets you run npm commands upon a git actions (E.g.commit, push).
+[Husky](https://github.com/typicode/husky) is a tool that lets you run npm commands upon git actions (E.g.commit, push).
 
 As an extra security layer we're going to make sure that all of our files are formatted before
-being commited.
+being committed.
 
 First add the following `script` to your package.json:
 
@@ -101,7 +99,7 @@ Then install husky:
 npm install husky --save-dev
 ```
 
-Last add the husky configuration to your package.json:
+Last add this husky configuration to your package.json:
 
 ``` json
 "husky": {
@@ -111,6 +109,6 @@ Last add the husky configuration to your package.json:
 }
 ```
 
-This config will execute `npm run lint` whenever you do a `git commit` , this way
+This config will execute `npm run lint` whenever you enter `git commit` , this way
 we guarantee that our code will always be perfectly formatted.
 
