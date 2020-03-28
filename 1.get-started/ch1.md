@@ -112,3 +112,4 @@ Last add this husky configuration to your package.json:
 This config will execute `npm run lint` whenever you enter `git commit` , this way
 we guarantee that our code will always be perfectly formatted.
 
+> [See changes in companion repo](https://github.com/champi-dev/structuring-react-apps-companion/tree/feature/get-started)
