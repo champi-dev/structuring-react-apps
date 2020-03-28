@@ -7,7 +7,6 @@
 To set up a brand new React project with [create-react-app](https://github.com/facebook/create-react-app) and configure the following tools:
 
 - Eslint / Standard / Husky
-- Jest / react-testing-library
 
 ## Table of Contents
 

@@ -40,16 +40,16 @@ After installing those dependencies, go to your package.json and make sure that 
 
 ``` json
 "eslintConfig": {
-    "extends": [
-      "react-app",
-      "standard"
-    ],
-    "settings": {
-			"react": {
-				"version": "999.999.999"
-			}
-		}
+  "extends": [
+    "react-app",
+    "standard"
+  ],
+  "settings": {
+    "react": {
+      "version": "999.999.999"
+    }
   }
+}
 ```
 
 > The react version set to 999.999.999 fixes [this issue](https://github.com/DRD4-7R/eslint-config-7r-building/issues/1)
@@ -113,3 +113,4 @@ Last add the husky configuration to your package.json:
 
 This config will execute `npm run lint` whenever you do a `git commit` , this way
 we guarantee that our code will always be perfectly formatted.
+
