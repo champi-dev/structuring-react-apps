@@ -52,4 +52,4 @@ We want to create a music streaming platform where:
 ## Table of Contents
 
 - [Get started](./1.get-started/README.md)
-- [Building ui components](./2.building-ui-components/README.md)
+- [Building UI components](./2.building-ui-components/README.md)

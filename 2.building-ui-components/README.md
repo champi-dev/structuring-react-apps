@@ -1,6 +1,6 @@
 # Structuring React Apps
 
-# Building ui components
+# Building UI components
 
 ## Motivation
 
@@ -11,7 +11,7 @@ Being able to **develop from scratch** every single little element of an entire 
 
 Being able to create such **smoothness** in a Web Page where everything seems to just appear and disappear at **60FPS**.
 
-Being able to write **complex validation logic**, complex **data parsing** for display is something that will stregenthen anyones ability to solve the **hardest of the problems**.
+Being able to write **complex validation logic**, complex **data parsing** for display is something that will strengthen anyones ability to solve the **hardest of the problems**.
 
 That said let's start this section of building **every element from sractch**.
 
@@ -21,4 +21,5 @@ That said let's start this section of building **every element from sractch**.
 
 ## Table of Contents
 
-- [Chapter 1: Buttons](ch1.md)
+- [Chapter 1: UI Configuration](ch1.md)
+- [Chapter 2: Buttons](ch2.md)
