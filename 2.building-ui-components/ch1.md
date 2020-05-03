@@ -109,17 +109,121 @@ p, label, span, button {
 }
 ```
 
-```
-/* 
-  TODO: Writing for article
+## Add the font
 
-  styled components | react router
-  .js file with color variables 
-  App general styles
-  Add font *
-  Components showcase page 
+Grab the Roboto font [from here](https://fonts.google.com/specimen/Roboto) and
+put the files in `src/assets/fonts/`
 
-  rafce (shortcut)
-  https://github.com/airbnb/javascript/issues/1235 (good info)
-*/
+## Import the styles configuration into index.jsx
+
+Now we need to import `uiConfig`, `normalize.scss` and `general.scss` in our `index.jsx`.
+We'll also set the font related styles using our variables from `uiConfig`.
+
+Your `index.jsx` should look like this:
+
+```javascript
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
+import uiConfig from 'assets/styles/uiConfig'
+import 'assets/styles/normalize.scss'
+import 'assets/styles/general.scss'
+
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root')
+)
+
+const htmlEl = document.querySelector('html')
+htmlEl.style.fontSize = uiConfig.font.responsiveSize
+
+const bodyEl = document.querySelector('body')
+bodyEl.style.fontSize = uiConfig.font.baseSize
+bodyEl.style.fontWeight = uiConfig.font.mediumWeight
+bodyEl.style.fontFamily = uiConfig.font.mainFamily
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister()
 ```
+
+## Add UIGuide.jsx
+
+Create a `UIGuide.jsx` file under `src/containers`, we'll use this file to showcase and
+develop all of the ui components.
+
+`UIGuide.jsx`
+```javascript
+import React from 'react'
+import styled from 'styled-components'
+import Button from 'components/UI/Button'
+import uiConfig from 'assets/styles/uiConfig'
+
+const UIGuide = styled.div`
+  width: 100%;
+  padding: ${uiConfig.spaces.small};
+  background: ${uiConfig.colors.primary.background};
+
+  h1 {
+    color: ${uiConfig.colors.primary.text};
+    margin-bottom: ${uiConfig.spaces.small};
+  }
+`
+
+export default () => {
+  return (
+    <UIGuide>
+      <h1>Button</h1>
+      <Button>Hello React!</Button>
+    </UIGuide>
+  )
+}
+```
+
+## Add a route for UIGuide.jsx
+
+Now we need a route for our `UIGuide.jsx`.
+
+Your `App.jsx` file should look like this:
+
+```javascript
+import React from 'react'
+import {
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom'
+import styled from 'styled-components'
+import UIGuide from 'containers/UIGuide'
+
+const App = styled.div`
+  display: flex;
+  height: 100vh;
+  overflow-y: auto;  
+`
+
+export default function () {
+  return (
+    <App>
+      <Switch>
+        <Route path="/" exact component={UIGuide} />
+        <Redirect to="/" />
+      </Switch>
+    </App>
+  )
+}
+```
+
+---
+
+If you now start you local server with `npm start` your browser should show
+this:
+
+<img src="https://firebasestorage.googleapis.com/v0/b/devsarmico-portfolio.appspot.com/o/Screenshot-from-2020-05-03-17-38-31-compressor.png?alt=media&token=bbba064e-1691-4f65-8f27-7f7ccc988977" style="object-fit:contain; border-radius: 4px;">
